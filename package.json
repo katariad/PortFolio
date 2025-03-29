@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "nodemailer": "^6.10.0",
+    "nodemon": "^3.1.9"
+  },
+  "scripts": {
+    "start": "nodemon server",
+    "publish": "npm start publish"
+  },
+  "type": "module"
+}
