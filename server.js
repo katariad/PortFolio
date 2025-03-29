@@ -41,7 +41,16 @@ app.get("/", (req, res) => {
   res.send("server is running");
 });
 
-const port = 5000;
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+if (process.env.NODE_ENV !== "production") {
+  const PORT = process.env.PORT || 8000;
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
+
+export default app;
+
+// const port = 5000;
+// app.listen(port, () => {
+//   console.log(`Server running on port ${port}`);
+// });
